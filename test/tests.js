@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     addExclamationPoints,
+    divideThenMultiply,
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
@@ -71,6 +72,23 @@ test('this test should multiply by twelve, then cut the result in half', (expect
 
     const expected3 = 48;
     const actual3 = multiplyBy12ThenHalve(8);
+
+    expect.equal(actual3, expected3);
+});
+
+test('this test should divide then multiply', (expect) => {
+    const expected = 6;
+    const actual = divideThenMultiply(4, 2, 3);
+
+    expect.equal(actual, expected);
+
+    const expected2 = -5;
+    const actual2 = divideThenMultiply(-2, 2, 5);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = 6;
+    const actual3 = divideThenMultiply(-2, 2, -6);
 
     expect.equal(actual3, expected3);
 });

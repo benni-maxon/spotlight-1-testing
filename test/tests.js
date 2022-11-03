@@ -8,6 +8,7 @@ import {
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
+    renderDogLI,
     returnAsAnArray,
     returnAsAString,
 } from '../functions.js';
@@ -179,6 +180,23 @@ test('this test should return last item from array', (expect) => {
 
     const expected3 = 'hockey';
     const actual3 = getLastItem(['hockey']);
+
+    expect.equal(actual3, expected3);
+});
+
+test('this test should return list item with name of dog', (expect) => {
+    const expected = '<li>Kenni</li>';
+    const actual = renderDogLI({ name: 'Kenni', age: 27 });
+
+    expect.equal(actual, expected);
+
+    const expected2 = '<li>Benni</li>';
+    const actual2 = renderDogLI({ name: 'Benni', age: 31 });
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = '<li>Brenley</li>';
+    const actual3 = renderDogLI({ name: 'Brenley', age: 24 });
 
     expect.equal(actual3, expected3);
 });

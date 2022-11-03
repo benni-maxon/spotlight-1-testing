@@ -2,6 +2,7 @@
 import {
     addExclamationPoints,
     divideThenMultiply,
+    makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
@@ -125,6 +126,23 @@ test('this test should return three numbers as a string', (expect) => {
 
     const expected3 = '-22-6';
     const actual3 = returnAsAString(-2, 2, -6);
+
+    expect.equal(actual3, expected3);
+});
+
+test('this test should make a lucky greeting', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 6.';
+    const actual = makeLuckyGreeting(4, 2);
+
+    expect.equal(actual, expected);
+
+    const expected2 = 'Hello! Your lucky number for the day is 3.';
+    const actual2 = makeLuckyGreeting(-2, 5);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = 'Hello! Your lucky number for the day is -8.';
+    const actual3 = makeLuckyGreeting(-2, -6);
 
     expect.equal(actual3, expected3);
 });

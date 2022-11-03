@@ -2,6 +2,7 @@
 import {
     addExclamationPoints,
     divideThenMultiply,
+    getLastItem,
     getSecondItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
@@ -161,6 +162,23 @@ test('this test should return second item from array', (expect) => {
 
     const expected3 = 'fishing';
     const actual3 = getSecondItem(['hockey', 'fishing', 'bikes']);
+
+    expect.equal(actual3, expected3);
+});
+
+test('this test should return last item from array', (expect) => {
+    const expected = 'quesadilla';
+    const actual = getLastItem(['tacos', 'burritos', 'quesadilla']);
+
+    expect.equal(actual, expected);
+
+    const expected2 = 'beer';
+    const actual2 = getLastItem(['tea', 'beer']);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = 'hockey';
+    const actual3 = getLastItem(['hockey']);
 
     expect.equal(actual3, expected3);
 });

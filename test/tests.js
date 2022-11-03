@@ -6,6 +6,7 @@ import {
     multiplyBySeven,
     myFunction,
     returnAsAnArray,
+    returnAsAString,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -109,4 +110,21 @@ test('this test should return three numbers as an array', (expect) => {
     const actual3 = returnAsAnArray(-2, 2, -6);
 
     expect.deepEqual(actual3, expected3);
+});
+
+test('this test should return three numbers as a string', (expect) => {
+    const expected = '423';
+    const actual = returnAsAString(4, 2, 3);
+
+    expect.equal(actual, expected);
+
+    const expected2 = '-225';
+    const actual2 = returnAsAString(-2, 2, 5);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = '-22-6';
+    const actual3 = returnAsAString(-2, 2, -6);
+
+    expect.equal(actual3, expected3);
 });

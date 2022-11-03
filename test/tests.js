@@ -8,6 +8,7 @@ import {
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
+    renderDogDiv,
     renderDogLI,
     returnAsAnArray,
     returnAsAString,
@@ -197,6 +198,23 @@ test('this test should return list item with name of dog', (expect) => {
 
     const expected3 = '<li>Brenley</li>';
     const actual3 = renderDogLI({ name: 'Brenley', age: 24 });
+
+    expect.equal(actual3, expected3);
+});
+
+test('this test should return a a <div> with the dog info', (expect) => {
+    const expected = '<div><h1>Kenni</h1><p>Kenni is 27 years old</p></div>';
+    const actual = renderDogDiv({ name: 'Kenni', age: 27 });
+
+    expect.equal(actual, expected);
+
+    const expected2 = '<div><h1>Benni</h1><p>Benni is 31 years old</p></div>';
+    const actual2 = renderDogDiv({ name: 'Benni', age: 31 });
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = '<div><h1>Brenley</h1><p>Brenley is 24 years old</p></div>';
+    const actual3 = renderDogDiv({ name: 'Brenley', age: 24 });
 
     expect.equal(actual3, expected3);
 });

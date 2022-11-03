@@ -2,6 +2,7 @@
 import {
     addExclamationPoints,
     divideThenMultiply,
+    getSecondItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
@@ -143,6 +144,23 @@ test('this test should make a lucky greeting', (expect) => {
 
     const expected3 = 'Hello! Your lucky number for the day is -8.';
     const actual3 = makeLuckyGreeting(-2, -6);
+
+    expect.equal(actual3, expected3);
+});
+
+test('this test should return second item from array', (expect) => {
+    const expected = 'burritos';
+    const actual = getSecondItem(['tacos', 'burritos', 'quesadilla']);
+
+    expect.equal(actual, expected);
+
+    const expected2 = 'wine';
+    const actual2 = getSecondItem(['tea', 'wine', 'beer']);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = 'fishing';
+    const actual3 = getSecondItem(['hockey', 'fishing', 'bikes']);
 
     expect.equal(actual3, expected3);
 });
